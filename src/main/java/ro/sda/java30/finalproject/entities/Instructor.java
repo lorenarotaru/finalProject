@@ -5,10 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,8 +22,16 @@ public class Instructor {
     private String experience;
     private String certifications;
     private String description;
-    private String languages;
     @Lob
     private byte[] photo;
+    @ManyToMany (mappedBy = "instructors")
+    private List<Customer> customers;
 
+    @ManyToMany
+    @JoinTable (name="instructor_languages", joinColumns =@JoinColumn(name="instructor_id"), inverseJoinColumns = @JoinColumn(name="languages_id"))
+    private List<Languages> languages;
+
+    @ManyToMany
+    @JoinTable (name="instructor_specialization", joinColumns =@JoinColumn(name="instructor_id"), inverseJoinColumns = @JoinColumn(name="specialization_id"))
+    private  List<Specialization> specializations;
 }

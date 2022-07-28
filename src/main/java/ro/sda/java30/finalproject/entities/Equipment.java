@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -23,4 +24,6 @@ public class Equipment {
     private String level;
     private Integer size;
     private String description;
+    @ManyToMany (mappedBy = "equipments")
+    private List<Customer> customers;
 }

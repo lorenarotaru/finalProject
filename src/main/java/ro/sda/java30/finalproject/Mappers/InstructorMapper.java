@@ -15,7 +15,6 @@ public class InstructorMapper implements Mapper<Instructor, InstructorDto> {
         entity.setDescription(dto.getDescription());
         entity.setExperience(dto.getExperience());
         entity.setId(dto.getId());
-        entity.setLanguages(dto.getLanguages());
         entity.setName(dto.getName());
         entity.setPhoneNumber(dto.getPhoneNumber());
         entity.setPhoto(dto.getPhoto());
@@ -29,7 +28,6 @@ public class InstructorMapper implements Mapper<Instructor, InstructorDto> {
         dto.setDescription(entity.getDescription());
         dto.setExperience(entity.getExperience());
         dto.setId(entity.getId());
-        dto.setLanguages(entity.getLanguages());
         dto.setName(entity.getName());
         dto.setPhoneNumber(entity.getPhoneNumber());
         dto.setPhoto(entity.getPhoto());

@@ -2,6 +2,7 @@ package ro.sda.java30.finalproject.entities;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Languages{
@@ -9,5 +10,8 @@ public class Languages{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String language;
+
+    @ManyToMany (mappedBy = "languages")
+    private List<Instructor> instructors;
 
 }

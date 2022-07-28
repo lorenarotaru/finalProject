@@ -8,6 +8,8 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,6 +21,9 @@ public class Specialization {
     @GeneratedValue
     private Long id;
     private String name;
+
+    @ManyToMany (mappedBy = "specializations")
+    private List<Instructor> instructors;
 
 
 }

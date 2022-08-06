@@ -15,7 +15,6 @@ import ro.sda.java30.finalproject.service.UserDetailsSecurityService;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-
     private UserDetailsSecurityService userDetailsSecurityService;
 
     public SecurityConfiguration(UserDetailsSecurityService userDetailsSecurityService) {

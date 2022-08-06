@@ -7,6 +7,8 @@ import ro.sda.java30.finalproject.model.EquipmentDto;
 import ro.sda.java30.finalproject.model.InstructorDto;
 import ro.sda.java30.finalproject.service.EquipmentService;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/equipment")
 public class EquipmentController {

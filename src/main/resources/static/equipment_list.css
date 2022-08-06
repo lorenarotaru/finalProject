@@ -1,4 +1,15 @@
-thead{
-    width: 500px;
+*{
+    font-family: "Poppins", sans-serif;
+}
+thead,tbody{
+    /*width: 500px;*/
     height: 40px;
+}
+th{
+    width: 100px;
+    /*display: flex;*/
+    justify-content: space-around;
+}
+tbody{
+    color:dodgerblue;
 }
